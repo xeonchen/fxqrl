@@ -3,6 +3,7 @@
 self.port.on('update_image', function onUpdate(image) {
   var parser = new DOMParser();
   var doc = parser.parseFromString(image, 'text/html');
-  var node = doc.firstChild;
-  document.getElementById('qrcode').appendChild(node);
+  var img_el = doc.getElementsByTagName('img')[0];
+  document.getElementById('qrcode_dl').href = img_el.src;
+  document.getElementById('qrcode_img').src = img_el.src;
 });
