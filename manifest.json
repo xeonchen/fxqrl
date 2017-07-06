@@ -10,7 +10,8 @@
     "64": "icons/fxqrl-64.png"
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
 
   "browser_action": {
@@ -22,5 +23,9 @@
     },
     "default_title": "fxqrl",
     "default_popup": "popup/fxqrl.html"
+  },
+
+  "options_ui": {
+    "page": "settings/options.html"
   }
 }
